@@ -110,47 +110,34 @@ input{
 }
 .scroll{
     overflow-y: auto;
-    height: 390px;
+    height: 410px;
     width: 300px;
+    padding: 10px;
 }
 .modal-wrap{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px 5px;
 }
 
 /*Inside modal*/
-
-.icon-wrap{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    padding: 2px
-}
-.icon-wrap:hover, .menu-item:focus ~ .icon-wrap{
-    background-color: #f1f1f1;}
-
 .menu-item{
-    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
+    justify-content: center;
     row-gap: 10px;
+    column-gap: 10px;
     padding: 5px;
     border-radius: 10%;
     text-decoration: none;
 }
-.menu-item:focus, .menu-item:visited {
+.menu-item:focus, .menu-item:visited,.menu-item:hover {
     background-color: #f1f1f1;
     outline:none;
 }
-
 .menu-icon{
     height: 56px;
     width: 56px;
@@ -161,25 +148,21 @@ input{
     color: #7c7c7c;}
 
 /*More button set up*/
-
 .more-text{
     font-family: Verdana, sans-serif;
     color: #ffd2b9;
 }
 .more-wrap{
-    width: 100%;
     display: flex;
     justify-content: center;
     padding: 10px 0;
+    border-radius: 20px;
 }
 .more-wrap:hover{
     background-color: #f6f6f6;
 }
 .more-icon-wrap{
     display: none;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-content: space-between;
     border-top: 1px solid #d5d5d5;
     padding-top: 10px;
 }
@@ -189,7 +172,10 @@ input{
 #more-btn:checked + .more-wrap{
     display: none;}
 #more-btn:checked ~ .more-icon-wrap{
-    display: flex;}
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px 5px;
+}
 
 
 
